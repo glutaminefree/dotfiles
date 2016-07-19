@@ -1,93 +1,93 @@
 " NeoBundle Scripts {
-	if has('vim_starting')
-		set nocompatible " Be iMproved
-		" Required:
-		set runtimepath+=/home/glutaminefree/.vim/bundle/neobundle.vim/
-	endif
+    if has('vim_starting')
+        set nocompatible " Be iMproved
+        " Required:
+        set runtimepath+=/home/glutaminefree/.vim/bundle/neobundle.vim/
+    endif
 
-	" Required:
-	call neobundle#begin(expand('/home/glutaminefree/.vim/bundle'))
+    " Required:
+    call neobundle#begin(expand('/home/glutaminefree/.vim/bundle'))
 
-	" Let NeoBundle manage NeoBundle
-	" Required:
-	NeoBundleFetch 'Shougo/neobundle.vim'
+    " Let NeoBundle manage NeoBundle
+    " Required:
+    NeoBundleFetch 'Shougo/neobundle.vim'
 
-	" Bundles {
-		" colorschemes {
-			NeoBundle 'altercation/vim-colors-solarized'
-			NeoBundle 'sickill/vim-monokai'
-		" }
+    " Bundles {
+        " colorschemes {
+            NeoBundle 'altercation/vim-colors-solarized'
+            NeoBundle 'sickill/vim-monokai'
+        " }
 
-		" appearance {
-			NeoBundle 'mkitt/tabline.vim'
+        " appearance {
+            NeoBundle 'mkitt/tabline.vim'
             NeoBundle 'vim-airline/vim-airline'
             NeoBundle 'vim-airline/vim-airline-themes'
             NeoBundle 'tpope/vim-fugitive'
-		" }
+        " }
 
-		" programming helpers {
-			NeoBundle 'scrooloose/nerdtree'
+        " programming helpers {
+            NeoBundle 'scrooloose/nerdtree'
             NeoBundle 'jistr/vim-nerdtree-tabs'
-			NeoBundle 'scrooloose/nerdcommenter'
+            NeoBundle 'scrooloose/nerdcommenter'
             NeoBundle 'vim-scripts/taglist.vim'
-			NeoBundle 'Shougo/neosnippet'
-			NeoBundle 'Shougo/neosnippet-snippets'
-			NeoBundle 'Raimondi/delimitMate'
-			NeoBundle 'kazy1991/simple-browser.vim'
-			NeoBundle 'sheerun/vim-polyglot'
+            NeoBundle 'Shougo/neosnippet'
+            NeoBundle 'Shougo/neosnippet-snippets'
+            NeoBundle 'Raimondi/delimitMate'
+            NeoBundle 'kazy1991/simple-browser.vim'
+            NeoBundle 'sheerun/vim-polyglot'
             NeoBundle 'godlygeek/tabular'
             NeoBundle 'tobyS/pdv', {"depends": "tobyS/vmustache"}
-		" }
+        " }
 
-		" html {
-			NeoBundle 'mattn/emmet-vim'
-			NeoBundle 'valloric/MatchTagAlways'
-			NeoBundle 'c9s/vim-twig'
-		" }
+        " html {
+            NeoBundle 'mattn/emmet-vim'
+            NeoBundle 'valloric/MatchTagAlways'
+            NeoBundle 'c9s/vim-twig'
+        " }
 
-		" less {
-			NeoBundle 'groenewege/vim-less'
-		" }
+        " less {
+            NeoBundle 'groenewege/vim-less'
+        " }
 
         " logs {
             NeoBundle 'dzeban/vim-log-syntax'
         " }
 
-		" Other {
-			NeoBundle 'Shougo/vimproc.vim', {'build': {'linux': 'make', 'unix': 'gmake'}}
-		" }
-	"}
+        " Other {
+            NeoBundle 'Shougo/vimproc.vim', {'build': {'linux': 'make', 'unix': 'gmake'}}
+        " }
+    "}
 
-	" Required:
-	call neobundle#end()
+    " Required:
+    call neobundle#end()
 
-	" Required:
-	filetype plugin indent on
+    " Required:
+    filetype plugin indent on
 
-	" If there are uninstalled bundles found on startup,
-	" this will conveniently prompt you to install them.
-	NeoBundleCheck
+    " If there are uninstalled bundles found on startup,
+    " this will conveniently prompt you to install them.
+    NeoBundleCheck
 " }
 
 
 " My conf {
-	" emmet {
-		let g:user_emmet_leader_key='<C-E>'
-	" }
-	" delimMate {
-		let delimitMate_expand_cr = 1
-	" }
-	" NeoSnippet {
-		let g:neosnippet#snippets_directory='~/.vim/snippets'
+    " emmet {
+        let g:user_emmet_leader_key='<C-E>'
+    " }
+    " delimMate {
+        let delimitMate_expand_cr = 1
+    " }
+    " NeoSnippet {
+        let g:neosnippet#snippets_directory='~/.vim/snippets'
         let g:neosnippet#disable_runtime_snippets = {'_':1,}
-	" }
-	" NerdTree {
+    " }
+    " NerdTree {
         let NERDTreeShowHidden = 1
         "autocmd vimenter * NERDTree
-	" }
-	" MatchTagAlways {
+    " }
+    " MatchTagAlways {
         let g:mta_filetypes = {'html':1,'php':1,'xhtml':1,'xml':1,}
-	" }
+    " }
     " Airline {
         let g:airline_extensions = ['branch']
         let g:airline_powerline_fonts = 1
@@ -105,20 +105,20 @@
         let Tlist_Show_One_File           = 1
     " }
 
-	" Colorsheme {
-		syntax enable
-		colorscheme solarized
+    " Colorsheme {
+        syntax enable
+        colorscheme solarized
         let g:solarized_termcolors=256
         set background=light
-		"syntax enable
-		"colorscheme monokai
-	" }
+        "syntax enable
+        "colorscheme monokai
+    " }
 
-	" Aliases {
-		cmap w!! w !sudo tee % >/dev/null
-	" }
+    " Aliases {
+        cmap w!! w !sudo tee % >/dev/null
+    " }
 
-	" Other settings {
+    " Other settings {
         set guioptions+=c
         set guioptions-=T
         set guioptions-=m
@@ -130,77 +130,77 @@
         set guioptions-=F
         set guifont=Monofur\ for\ Powerline\ 12
 
-		set number " Show line numbers
-		set nowrap " Disable text wrap
-		set showtabline=2
-		set autochdir
-		set encoding=utf-8
-		set fileencodings=utf-8,cp1251,koi8-r,cp866
-		set termencoding=utf-8
-		set ignorecase " Ignore case when searching
-		set smartcase " Ignore prev options if search for different case symbols
-		set backupdir=/home/glutaminefree/.vim/tmp,/tmp
-		set directory=/home/glutaminefree/.vim/tmp,/tmp
-		set omnifunc=syntaxcomplete#Complete " Omni completion
-		set completeopt-=preview " No preview on omni completion
+        set number " Show line numbers
+        set nowrap " Disable text wrap
+        set showtabline=2
+        set autochdir
+        set encoding=utf-8
+        set fileencodings=utf-8,cp1251,koi8-r,cp866
+        set termencoding=utf-8
+        set ignorecase " Ignore case when searching
+        set smartcase " Ignore prev options if search for different case symbols
+        set backupdir=/home/glutaminefree/.vim/tmp,/tmp
+        set directory=/home/glutaminefree/.vim/tmp,/tmp
+        set omnifunc=syntaxcomplete#Complete " Omni completion
+        set completeopt-=preview " No preview on omni completion
         set laststatus=2 " Always show statusbar
         set noshowmode
 
-		set expandtab
-		set tabstop=4
-		set shiftwidth=4
-		set softtabstop=4
-		set smarttab
-		set smartindent
-		set autoindent
+        set expandtab
+        set tabstop=4
+        set shiftwidth=4
+        set softtabstop=4
+        set smarttab
+        set smartindent
+        set autoindent
 
-		" Code folding {
-		set foldmethod=indent
-		set foldnestmax=10
-		set nofoldenable
-		set foldlevel=1
-		" }
+        " Code folding {
+        set foldmethod=indent
+        set foldnestmax=10
+        set nofoldenable
+        set foldlevel=1
+        " }
 
-		" Save/Restore buffers {
-		au BufWinLeave *.* silent mkview " Save buffer view on buffer close
-		au BufWinEnter *.* silent loadview " Restore buffer view on buffer opening
-		" }
+        " Save/Restore buffers {
+        au BufWinLeave *.* silent mkview " Save buffer view on buffer close
+        au BufWinEnter *.* silent loadview " Restore buffer view on buffer opening
+        " }
 
-		" Netrw {
-		let g:netrw_liststyle=3
-		" }
-	" }
+        " Netrw {
+        let g:netrw_liststyle=3
+        " }
+    " }
 
-	" Shortcuts {
-		nnoremap <Leader>y "+y
-		vnoremap <Leader>y "+y
-		nnoremap <Leader>p "+p
+    " Shortcuts {
+        nnoremap <Leader>y "+y
+        vnoremap <Leader>y "+y
+        nnoremap <Leader>p "+p
 
-		nnoremap <Leader>h :set ft=html<CR>
-		nnoremap <Leader>p :set ft=php<CR>
+        nnoremap <Leader>h :set ft=html<CR>
+        nnoremap <Leader>p :set ft=php<CR>
 
-		inoremap <C-j> <Esc>
-		vnoremap <C-j> <Esc>
-		nnoremap <C-j> <Esc>
+        inoremap <C-j> <Esc>
+        vnoremap <C-j> <Esc>
+        nnoremap <C-j> <Esc>
 
-		inoremap <C-p> <C-r>"
+        inoremap <C-p> <C-r>"
 
-		vnoremap <C-E> nooperator
+        vnoremap <C-E> nooperator
 
-		nnoremap <F1> :TlistToggle<CR>
-		inoremap <F1> <Esc>
-		vnoremap <F1> <Esc>
+        nnoremap <F1> :TlistToggle<CR>
+        inoremap <F1> <Esc>
+        vnoremap <F1> <Esc>
 
-		nnoremap <F2> :NERDTreeTabsToggle<CR>
-		nnoremap <F3> :let @+ = expand("%:p")<CR> " Copy filename to clipboard
-		set pastetoggle=<F4>
-		nnoremap <F5> :call pdv#DocumentCurrentLine()<CR>
-		vnoremap <F6> :Tabularize /=><CR>
-		nnoremap <F7> /\s\+$<CR>
-		nnoremap <F8> :!php -l %<CR>
-		nnoremap <F9> :!php %<CR>
+        nnoremap <F2> :NERDTreeTabsToggle<CR>
+        nnoremap <F3> :let @+ = expand("%:p")<CR> " Copy filename to clipboard
+        set pastetoggle=<F4>
+        nnoremap <F5> :call pdv#DocumentCurrentLine()<CR>
+        vnoremap <F6> :Tabularize /=><CR>
+        nnoremap <F7> /\s\+$<CR>
+        nnoremap <F8> :!php -l %<CR>
+        nnoremap <F9> :!php %<CR>
 
-		imap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
-		smap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-	" }
+        imap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
+        smap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+    " }
 " }
