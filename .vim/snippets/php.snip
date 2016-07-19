@@ -1,0 +1,78 @@
+snippet php
+	<?php ${1} ?>
+snippet php2
+	<?php
+    ${1}
+snippet php3
+	<?php
+    ${1}
+    ?>
+snippet php4
+	<?= ${1} ?>
+snippet ifdev
+	if ( !empty($_COOKIE['dev']) ) {
+		${1}
+	}
+snippet iff
+	<?php if ( false ) { ?>
+		${1}
+	<?php } ?>
+snippet end
+	<?php } ?>
+snippet phputf
+	header('Content-Type: text/html; charset=utf-8');
+snippet prd
+	print_r(${1});
+	die(PHP_EOL);
+snippet ppr
+    echo '<pre>';
+	print_r(${1});
+    echo '</pre>'.PHP_EOL;
+snippet pprd
+    echo '<pre>';
+	print_r(${1});
+    echo '</pre>'.PHP_EOL;
+	die;
+snippet dump
+    file_put_contents('/home/glutaminefree/job/${1}', print_r($var, true));
+    die;
+snippet rf
+    return false;
+snippet wpph
+    <?php
+    /**
+     * Template Name: ${1}
+     */
+
+    get_header();
+    ?>
+    ${2}
+snippet eg
+    <?php echo _(${1}); ?>
+snippet rg
+    <?php _(${1}); ?>
+snippet echo
+    <?php echo ${1}; ?>
+snippet ob
+    ob_start();
+    ${1}
+    $output = ob_get_clean();
+
+snippet utf8
+	<meta charset="utf-8" />
+snippet css
+	<link rel="stylesheet" href="${1}" />
+snippet js
+	<script type="text/javascript">${1}</script>
+snippet jssrc
+	<script type="text/javascript" src="${1}"></script>
+snippet ready
+	<script type="text/javascript">
+		jQuery(function($){
+            ${1}
+		});
+	</script>
+snippet readyjs
+    document.addEventListener('DOMContentLoaded', function(){
+        ${1}
+    });
