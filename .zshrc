@@ -85,7 +85,7 @@ export GOPATH=~/documents/go-packages
 export PATH=$PATH:$GOPATH/bin
 export VAGRANT_DEFAULT_PROVIDER=virtualbox
 
-alias v="caps2ctrl; gvim -v --servername orig"
+alias v="gvim -v --servername orig"
 alias r="ranger"
 alias :q="exit"
 alias py3="python3"
