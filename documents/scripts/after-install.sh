@@ -1,14 +1,18 @@
 #!/bin/bash
 
-###########################################
-#                                         #
-# Script for installing soft/copy configs #
-# on fresh Fedora                         #
-#                                         #
-# Required:                               #
-#                                         #
-# * Yandex.Disk full sync                 #
-###########################################
+#########################################################################
+#                                                                       #
+# Script for installing soft/copy configs                               #
+# on fresh Fedora                                                       #
+#                                                                       #
+# Required:                                                             #
+#                                                                       #
+# * Yandex.Disk full sync                                               #
+#   http://repo.yandex.ru/yandex-disk/yandex-disk-latest.x86_64.rpm     #
+#                                                                       #
+# * RPM Fusion repo configured                                          #
+#   http://rpmfusion.org/Configuration                                  #
+#########################################################################
 
 # soft
 echo 'Updating soft'
@@ -40,6 +44,9 @@ sudo cp /home/glutaminefree/Yandex.Disk/backups/linux/configs/httpd/conf.d/sites
 sudo cp /home/glutaminefree/Yandex.Disk/backups/linux/configs/httpd/conf.modules.d/10-php.conf /etc/httpd/conf.modules.d/10-php.conf
 sudo cp /home/glutaminefree/Yandex.Disk/backups/linux/configs/selinux/config /etc/selinux/config
 sudo chmod 600 /etc/selinux/config
+
+echo 'Enable httpd service'
+sudo systemctl enable httpd.service
 
 echo 'Done'
 echo 'Need to restart!'
