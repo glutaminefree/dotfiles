@@ -32,6 +32,11 @@
 /.vimperator/*
 !/.vimperator/plugin
 
+#etc
+!/documents
+/documents/*
+!/documents/scripts
+
 #files
 !.gitconfig
 !.gitignore
