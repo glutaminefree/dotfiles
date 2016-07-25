@@ -24,7 +24,7 @@ sudo dnf install -y\
     vim vim-X11 ctags-etags\
     ranger highlight atool lynx mediainfo\
     keepassx thunderbird gimp viewnior poedit\
-    dropbox vlc
+    dropbox vlc qbittorrent
 
 # default web site
 echo 'Creating default web site'
