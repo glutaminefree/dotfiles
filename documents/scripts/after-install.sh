@@ -23,7 +23,8 @@ sudo dnf install -y\
     zsh git git-cola htop wget httpd php\
     vim vim-X11 ctags-etags\
     ranger highlight atool lynx mediainfo\
-    keepassx thunderbird gimp viewnior poedit\
+    filezilla poedit gimp\
+    keepassx thunderbird viewnior\
     dropbox vlc qbittorrent
 
 # default web site
