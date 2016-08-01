@@ -26,6 +26,12 @@
 /.vim/bundle/*
 !/.vim/bundle/neobundle.vim
 !/.vim/snippets
+!/.vim/tmp
+/.vim/tmp/*
+!/.vim/tmp/.gitkeep
+!/.vim/view
+/.vim/view/*
+!/.vim/view/.gitkeep
 
 #vimperator
 !/.vimperator
