@@ -37,6 +37,7 @@
             NeoBundle 'tobyS/pdv', {"depends": "tobyS/vmustache"}
             NeoBundle 'mattn/emmet-vim'
             NeoBundle 'valloric/MatchTagAlways'
+            NeoBundle 'tmhedberg/matchit'
         " }
 
         " syntax {
