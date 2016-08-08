@@ -35,9 +35,6 @@
             NeoBundle 'kazy1991/simple-browser.vim'
             NeoBundle 'godlygeek/tabular'
             NeoBundle 'tobyS/pdv', {"depends": "tobyS/vmustache"}
-        " }
-
-        " html {
             NeoBundle 'mattn/emmet-vim'
             NeoBundle 'valloric/MatchTagAlways'
         " }
