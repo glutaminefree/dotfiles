@@ -122,14 +122,15 @@ source ~/.vimrc-tabline
         inoremap <F1> <Esc>
         vnoremap <F1> <Esc>
 
-        nnoremap <F2> :NERDTreeTabsToggle<CR>
-        nnoremap <F3> :let @+ = expand("%:p")<CR> " Copy filename to clipboard
+        nnoremap  <F2> :NERDTreeTabsToggle<CR>
+        nnoremap  <F3> :let @+ = expand("%:p")<CR> " Copy filename to clipboard
         set pastetoggle=<F4>
-        nnoremap <F5> :call pdv#DocumentCurrentLine()<CR>
-        vnoremap <F6> :Tabularize /=><CR>
-        nnoremap <F7> /\s\+$<CR>
-        nnoremap <F8> :!php -l %<CR>
-        nnoremap <F9> :!php %<CR>
+        nnoremap  <F5> :call pdv#DocumentCurrentLine()<CR>
+        vnoremap  <F6> :Tabularize /=><CR>
+        nnoremap  <F7> /\s\+$<CR> " Highlight trailing spaces
+        nnoremap  <F8> :!php -l %<CR>
+        nnoremap  <F9> :!php %<CR>
+        nnoremap <F10> :%!python -m json.tool<CR>
 
         imap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
         smap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
