@@ -10,6 +10,8 @@
 # * Yandex.Disk full sync                                               #
 #   http://repo.yandex.ru/yandex-disk/yandex-disk-latest.x86_64.rpm     #
 #                                                                       #
+# * configs cloned from github                                          #
+#                                                                       #
 # * RPM Fusion repo configured                                          #
 #   http://rpmfusion.org/Configuration                                  #
 #########################################################################
@@ -40,11 +42,15 @@ echo '<?php phpinfo();' >> /var/www/html/dev.loc/index.php
 
 # copy configs
 echo 'Copying httpd/selinux configs'
-sudo cp /home/glutaminefree/Yandex.Disk/backups/linux/configs/httpd/conf.d/php.conf /etc/httpd/conf.d/php.conf
-sudo cp /home/glutaminefree/Yandex.Disk/backups/linux/configs/httpd/conf.d/sites.conf /etc/httpd/conf.d/sites.conf
+sudo cp /home/glutaminefree/Yandex.Disk/backups/linux/configs/httpd/conf.d/php.conf            /etc/httpd/conf.d/php.conf
+sudo cp /home/glutaminefree/Yandex.Disk/backups/linux/configs/httpd/conf.d/sites.conf          /etc/httpd/conf.d/sites.conf
 sudo cp /home/glutaminefree/Yandex.Disk/backups/linux/configs/httpd/conf.modules.d/10-php.conf /etc/httpd/conf.modules.d/10-php.conf
-sudo cp /home/glutaminefree/Yandex.Disk/backups/linux/configs/selinux/config /etc/selinux/config
+sudo cp /home/glutaminefree/Yandex.Disk/backups/linux/configs/selinux/config                   /etc/selinux/config
 sudo chmod 600 /etc/selinux/config
+
+# copy scripts
+sudo cp /home/glutaminefree/documents/scripts/create-site.sh  /usr/local/bin/create-site
+sudo cp /home/glutaminefree/documents/scripts/docker-clean.sh /usr/local/bin/docker-clean
 
 echo 'Enable httpd service'
 sudo systemctl enable httpd.service
