@@ -51,6 +51,8 @@ sudo chmod 600 /etc/selinux/config
 # copy scripts
 sudo cp /home/glutaminefree/documents/scripts/create-site.sh  /usr/local/bin/create-site
 sudo cp /home/glutaminefree/documents/scripts/docker-clean.sh /usr/local/bin/docker-clean
+sudo chmod 755 /usr/local/bin/create-site
+sudo chmod 755 /usr/local/bin/docker-clean
 
 echo 'Enable httpd service'
 sudo systemctl enable httpd.service
