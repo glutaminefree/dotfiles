@@ -1,3 +1,14 @@
 #!/bin/bash
-docker stop $(docker ps -a -q)
-docker rm $(docker ps -a -q)
+
+CONTAINERS=$(docker ps -a -q)
+
+if [[ -z "$CONTAINERS" ]]
+then
+    echo "Nothing to do."
+    exit
+fi
+
+echo 'Cleaning ...'
+docker stop $CONTAINERS
+docker rm   $CONTAINERS
+echo 'Done'
