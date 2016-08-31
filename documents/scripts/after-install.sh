@@ -2,8 +2,8 @@
 
 #########################################################################
 #                                                                       #
-# Script for installing soft/copy configs                               #
-# on fresh Fedora                                                       #
+# Script for installing soft/copy configs on fresh Fedora               #
+#                                                                       #
 #                                                                       #
 # Required:                                                             #
 #                                                                       #
@@ -11,9 +11,11 @@
 #   http://repo.yandex.ru/yandex-disk/yandex-disk-latest.x86_64.rpm     #
 #                                                                       #
 # * configs cloned from github                                          #
+#   https://github.com/glutaminefree/dotfiles                           #
 #                                                                       #
 # * RPM Fusion repo configured                                          #
 #   http://rpmfusion.org/Configuration                                  #
+#                                                                       #
 #########################################################################
 
 # soft
@@ -58,10 +60,12 @@ sudo cp /home/glutaminefree/Yandex.Disk/backups/linux/configs/selinux/config    
 sudo chmod 600 /etc/selinux/config
 
 # copy scripts
-sudo cp /home/glutaminefree/documents/scripts/create-site.sh  /usr/local/bin/create-site
-sudo cp /home/glutaminefree/documents/scripts/docker-clean.sh /usr/local/bin/docker-clean
+sudo cp /home/glutaminefree/documents/scripts/create-site.sh   /usr/local/bin/create-site
+sudo cp /home/glutaminefree/documents/scripts/docker-clean.sh  /usr/local/bin/docker-clean
+sudo cp /home/glutaminefree/documents/scripts/clean-firefox.sh /usr/local/bin/clean-firefox
 sudo chmod 755 /usr/local/bin/create-site
 sudo chmod 755 /usr/local/bin/docker-clean
+sudo chmod 755 /usr/local/bin/clean-firefox
 
 echo 'Enable httpd service'
 sudo systemctl enable httpd.service
