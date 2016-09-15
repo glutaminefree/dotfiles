@@ -37,6 +37,11 @@ sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/to
 mkdir $HOMEPATH/.oh-my-zsh/custom/themes/ -p
 cp $HOMEPATH/documents/configs/oh-my-zsh/pygmalion.zsh-theme $HOMEPATH/.oh-my-zsh/custom/themes/pygmalion.zsh-theme
 
+echo 'Installing NeoBundle for Vim'
+curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh > install.sh
+sh ./install.sh
+rm install.sh
+
 # copy scripts
 sudo cp $HOMEPATH/documents/scripts/docker-clean.sh  /usr/local/bin/docker-clean
 sudo cp $HOMEPATH/documents/scripts/open_with_vim.sh /usr/local/bin/owv
