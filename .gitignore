@@ -16,15 +16,11 @@
 !/.config/ranger/rifle.conf
 !/.config/ranger/scope.sh
 
-#oh my zsh
-!/.oh-my-zsh
-
 #vim
 !/.vim
 /.vim/*
 !/.vim/bundle
 /.vim/bundle/*
-!/.vim/bundle/neobundle.vim
 !/.vim/snippets
 !/.vim/tmp
 /.vim/tmp/*
@@ -42,6 +38,7 @@
 !/documents
 /documents/*
 !/documents/scripts
+!/documents/configs
 
 #files
 !.gitconfig
