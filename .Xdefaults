@@ -1,0 +1,13 @@
+URxvt.font: xft:Ubuntu Mono derivative Powerline:size=11:antialias=true:hinting=true
+
+URxvt.intensityStyles: false
+URxvt.iso14755:        false
+URxvt.scrollBar:       false
+URxvt.secondaryWheel:  true
+URxvt.transparent:     false
+URxvt.underlineURLs:   true
+URxvt.allow_bold:      false
+
+! Extensions {
+URxvt.perl-ext-common: tabbed
+! }

@@ -45,9 +45,11 @@ rm install.sh
 # copy scripts
 sudo cp $HOMEPATH/documents/scripts/docker-clean.sh  /usr/local/bin/docker-clean
 sudo cp $HOMEPATH/documents/scripts/open_with_vim.sh /usr/local/bin/owv
-sudo cp $HOMEPATH/documents/scripts/translate.sh /usr/local/bin/trans
+sudo cp $HOMEPATH/documents/scripts/translate.sh     /usr/local/bin/trans
+sudo cp $HOMEPATH/documents/Script/start-urxvt.sh    /usr/local/bin/term
 sudo chmod 755 /usr/local/bin/docker-clean
 sudo chmod 755 /usr/local/bin/owv
 sudo chmod 755 /usr/local/bin/trans
+sudo chmod 755 /usr/local/bin/term
 
 echo 'Done'

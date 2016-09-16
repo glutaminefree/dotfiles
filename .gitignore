@@ -4,6 +4,9 @@
 !/.config
 /.config/*
 
+#awesome
+!/.config/awesome
+
 #htop
 !/.config/htop
 /.config/htop/*
@@ -47,3 +50,5 @@
 !.vimrc*
 !.wegorc
 !.zshrc
+!.Xdefaults
+!.Xresources
