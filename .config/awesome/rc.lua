@@ -282,7 +282,7 @@ globalkeys = awful.util.table.join(
     -- Menubar
     awful.key({ modkey }, "p", function() menubar.show() end),
 
-    awful.key({ modkey }, "Shift_R", function() kbdcfg:next() end )
+    awful.key({ modkey }, "Alt_R", function() kbdcfg:next() end )
 )
 
 clientkeys = awful.util.table.join(

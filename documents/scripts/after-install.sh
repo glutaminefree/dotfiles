@@ -25,12 +25,19 @@ sudo dnf install -y \
     http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(lsb_release -r -s ).noarch.rpm
 sudo dnf update -y
 sudo dnf install -y \
-    zsh git git-cola htop wget docker \
+    zsh git git-cola htop wget docker docker-compose \
     vim vim-X11 ctags-etags \
     ranger highlight atool lynx mediainfo \
     filezilla poedit gimp \
     keepassx thunderbird viewnior \
     dropbox vlc qbittorrent \
+
+echo 'Enabling Docker service'
+sudo groupadd docker
+sudo usermod -aG docker glutaminefree
+sudo systemctl enable docker.service
+sudo systemctl start  docker.service
+echo 'If you need to use Docker now - you need to relogin'
 
 echo 'Installing Oh My Zsh'
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
