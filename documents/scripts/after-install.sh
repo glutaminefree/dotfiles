@@ -26,6 +26,7 @@ sudo dnf install -y \
 sudo dnf update -y
 sudo dnf install -y \
     zsh git git-cola htop wget docker docker-compose \
+    rxvt-unicode-256color-ml \
     vim vim-X11 ctags-etags \
     ranger highlight atool lynx mediainfo \
     filezilla poedit gimp \
