@@ -1,20 +1,13 @@
 #!/bin/bash
 
-#########################################################################
-#                                                                       #
-# Script for installing soft/copy configs on fresh Fedora               #
-#                                                                       #
-#                                                                       #
-# Required:                                                             #
-#                                                                       #
-# * configs cloned from github                                          #
-#   https://github.com/glutaminefree/dotfiles                           #
-#                                                                       #
-#########################################################################
+###########################################################
+#                                                         #
+# Script for installing soft/copy configs on fresh Fedora #
+#                                                         #
+###########################################################
 
 HOMEPATH='/home/glutaminefree'
 
-# soft
 echo 'Updating soft'
 sudo dnf update -y
 
@@ -50,7 +43,12 @@ curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.s
 sh ./install.sh
 rm install.sh
 
-# copy scripts
+echo 'Generating SSH keys'
+ssh-keygen -t rsa -b 4096 -C "glutaminefree@mail.ru"
+echo 'Add ~/.ssh/id_rsa.pub to https://github.com/settings/keys'
+sleep 2
+
+echo 'Copying configs'
 sudo cp $HOMEPATH/documents/scripts/docker-clean.sh  /usr/local/bin/docker-clean
 sudo cp $HOMEPATH/documents/scripts/open_with_vim.sh /usr/local/bin/owv
 sudo cp $HOMEPATH/documents/scripts/translate.sh     /usr/local/bin/trans
