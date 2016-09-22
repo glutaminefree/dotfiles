@@ -12,13 +12,8 @@ local naughty = require("naughty")
 local menubar = require("menubar")
 -- Language switcher
 local layout_indicator = require("keyboard-layout-indicator")
-
-kbdcfg = layout_indicator({
-    layouts = {
-        {name="us",  layout="us",  variant=nil},
-        {name="ru",  layout="ru",  variant=nil},
-    }
-})
+--Battery info
+local battery = require("battery")
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -117,6 +112,27 @@ mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
 menubar.utils.terminal = terminal -- Set the terminal for applications that require it
 -- }}}
 
+-- Layout Indicator configuration {{{
+kbdcfg = layout_indicator({
+    layouts = {
+        {name="us",  layout="us",  variant=nil},
+        {name="ru",  layout="ru",  variant=nil},
+    }
+})
+-- }}}
+
+-- Battery widget {{{
+batterywidget = wibox.widget.textbox()
+
+batterywidget_timer = timer({timeout = 1})
+batterywidget_timer:connect_signal("timeout", function()
+    batterywidget:set_text(batteryInfo("BAT0"))
+end)
+batterywidget_timer:start()
+
+batterywidget:set_text(batteryInfo("BAT0"))
+-- }}}
+
 -- {{{ Wibox
 -- Create a textclock widget
 mytextclock = awful.widget.textclock()
@@ -200,6 +216,8 @@ for s = 1, screen.count() do
     -- Widgets that are aligned to the right
     local right_layout = wibox.layout.fixed.horizontal()
     if s == 1 then right_layout:add(wibox.widget.systray()) end
+    right_layout:add(kbdcfg.widget)
+    right_layout:add(batterywidget)
     right_layout:add(mytextclock)
     right_layout:add(mylayoutbox[s])
 
@@ -433,7 +451,6 @@ client.connect_signal("manage", function (c, startup)
         right_layout:add(awful.titlebar.widget.stickybutton(c))
         right_layout:add(awful.titlebar.widget.ontopbutton(c))
         right_layout:add(awful.titlebar.widget.closebutton(c))
-        right_layout:add(kbdcfg.widget)
 
         -- The title goes in the middle
         local middle_layout = wibox.layout.flex.horizontal()
