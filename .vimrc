@@ -103,12 +103,11 @@ source ~/.vimrc-tabline
     " }
 
     " Shortcuts {
-        nnoremap <Leader>y "+y
         vnoremap <Leader>y "+y
         nnoremap <Leader>p "+p
 
         nnoremap <Leader>h :set ft=html<CR>
-        nnoremap <Leader>p :set ft=php<CR>
+        nnoremap <Leader>s :set ft=php<CR>
 
         inoremap <C-j> <Esc>
         vnoremap <C-j> <Esc>

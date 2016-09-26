@@ -71,10 +71,12 @@ sudo dracut --force
 echo 'Copying scripts'
 sudo cp $HOMEPATH/documents/scripts/open_with_vim.sh /usr/local/bin/owv
 sudo cp $HOMEPATH/documents/scripts/translate.sh     /usr/local/bin/trans
-sudo cp $HOMEPATH/documents/Script/start-urxvt.sh    /usr/local/bin/term
+sudo cp $HOMEPATH/documents/scripts/start-urxvt.sh   /usr/local/bin/term
+sudo cp $HOMEPATH/documents/scripts/start-gvim.sh    /usr/local/bin/gvimX
 sudo chmod 755 /usr/local/bin/owv
 sudo chmod 755 /usr/local/bin/trans
 sudo chmod 755 /usr/local/bin/term
+sudo chmod 755 /usr/local/bin/gvimX
 
 echo 'Done'
 echo 'You need to configure Dropbox and Yandex.Disk'

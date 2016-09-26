@@ -28,6 +28,7 @@
 !/.vim/snippets
 !/.vim/tmp
 /.vim/tmp/*
+/.vim/tmp/.*
 !/.vim/tmp/.gitkeep
 !/.vim/view
 /.vim/view/*
