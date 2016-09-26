@@ -19,6 +19,7 @@ sudo dnf update -y
 sudo dnf install -y \
     rxvt-unicode-256color-ml \
     make gcc \
+    #VirtualBox kmod-VirtualBox kernel-devel \
     zsh git git-cola htop wget \
     vim vim-X11 ctags-etags \
     ranger highlight atool lynx mediainfo \
