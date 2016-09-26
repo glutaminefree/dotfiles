@@ -1,4 +1,5 @@
 URxvt.font: xft:Ubuntu Mono derivative Powerline:size=11:antialias=true:hinting=true
+URxvt.boldFont: xft:Ubuntu Mono derivative Powerline:size=11:antialias=true:hinting=true
 
 URxvt.intensityStyles: false
 URxvt.iso14755:        false
