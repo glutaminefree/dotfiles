@@ -17,7 +17,7 @@ sudo dnf install -y \
     http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 sudo dnf update -y
 sudo dnf install -y \
-    rxvt-unicode-256color-ml \
+    rxvt-unicode-256color-ml network-manager-applet acpi \
     make gcc \
     #VirtualBox kmod-VirtualBox kernel-devel \
     zsh git git-cola htop wget scrot \
@@ -65,8 +65,8 @@ sh ./install.sh
 rm install.sh
 
 echo 'Disabling Plymouth graphical boot'
-sudo dnf remove plymouth
-sudo dnf install plymouth
+sudo dnf remove plymouth -y
+sudo dnf install plymouth -y
 sudo dracut --force
 
 echo 'Copying scripts'
@@ -78,6 +78,7 @@ sudo chmod 755 /usr/local/bin/owv
 sudo chmod 755 /usr/local/bin/trans
 sudo chmod 755 /usr/local/bin/term
 sudo chmod 755 /usr/local/bin/gvimX
+xrdb ~/.Xresources
 
 echo 'Done'
 echo 'You need to configure Dropbox and Yandex.Disk'

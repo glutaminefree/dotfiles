@@ -1,2 +1,2 @@
 #!/bin/bash
-urxvt-ml -e /usr/bin/zsh
+urxvt256c-ml -e /usr/bin/zsh
