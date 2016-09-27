@@ -300,7 +300,8 @@ globalkeys = awful.util.table.join(
     -- Menubar
     awful.key({ modkey }, "p", function() menubar.show() end),
 
-    awful.key({ modkey }, "Alt_R", function() kbdcfg:next() end )
+    awful.key({ }, "Alt_R", function() kbdcfg:next() end ),
+    awful.key({ }, "Print", function () awful.util.spawn("scrot -e 'mv $f ~/screenshots/ 2>/dev/null'") end)
 )
 
 clientkeys = awful.util.table.join(

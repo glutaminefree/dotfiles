@@ -20,7 +20,7 @@ sudo dnf install -y \
     rxvt-unicode-256color-ml \
     make gcc \
     #VirtualBox kmod-VirtualBox kernel-devel \
-    zsh git git-cola htop wget \
+    zsh git git-cola htop wget scrot \
     vim vim-X11 ctags-etags \
     ranger highlight atool lynx mediainfo \
     filezilla poedit gimp \
