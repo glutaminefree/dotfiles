@@ -301,6 +301,7 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey }, "p", function() menubar.show() end),
 
     awful.key({ }, "Alt_R", function() kbdcfg:next() end ),
+    awful.key({ }, "ISO_Next_Group", function() kbdcfg:next() end ),
     awful.key({ }, "Print", function () awful.util.spawn("scrot -e 'mv $f ~/screenshots/ 2>/dev/null'") end)
 )
 
