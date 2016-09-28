@@ -19,13 +19,14 @@ sudo dnf update -y
 sudo dnf install -y \
     rxvt-unicode-256color-ml network-manager-applet acpi \
     make gcc \
-    #VirtualBox kmod-VirtualBox kernel-devel \
+    #vagrant VirtualBox{from Oracle repo} kernel-devel dkms \
     zsh git git-cola htop wget scrot \
     vim vim-X11 ctags-etags \
     ranger highlight atool lynx mediainfo \
     filezilla poedit gimp \
     keepassx thunderbird viewnior \
     dropbox vlc qbittorrent \
+#vagrant plugin install vagrant-vbguest
 
 echo 'Generating SSH keys'
 ssh-keygen -t rsa -b 4096 -C "glutaminefree@mail.ru"

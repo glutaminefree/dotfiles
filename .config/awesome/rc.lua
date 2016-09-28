@@ -15,6 +15,28 @@ local layout_indicator = require("keyboard-layout-indicator")
 --Battery info
 local battery = require("battery")
 
+-- {{{ Autostart apps
+function spawn_once(command, class, tag)
+    -- create move callback
+    local callback
+    callback = function(c)
+        if c.class == class then
+            awful.client.movetotag(tag, c)
+            client.disconnect_signal("manage", callback)
+        end
+    end
+    client.connect_signal("manage", callback)
+    -- now check if not already running!
+    local findme = command
+    local firstspace = findme:find(" ")
+    if firstspace then
+        findme = findme:sub(0, firstspace-1)
+    end
+    -- finally run it
+    awful.util.spawn_with_shell("pgrep -u $USER -x " .. findme .. " > /dev/null || exec " .. command)
+end
+-- }}}
+
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
@@ -399,6 +421,10 @@ awful.rules.rules = {
     -- Set Firefox to always map on tags number 2 of screen 1.
     -- { rule = { class = "Firefox" },
     --   properties = { tag = tags[1][2] } },
+    --{ rule = { class = "Gvim" }, properties = { tag = tags[1][3] } },
+    --{ rule = { class = "Firefox" }, properties = { tag = tags[1][5] } },
+    --{ rule = { class = "Thunderbird" }, properties = { tag = tags[1][6] } },
+    --{ rule = { class = "Git_Cola" }, properties = { tag = tags[1][9] } },
 }
 -- }}}
 
@@ -476,6 +502,13 @@ awful.util.spawn_with_shell("setxkbmap -option ctrl:nocaps")
 awful.util.spawn_with_shell("dropbox start")
 awful.util.spawn_with_shell("yandex-disk start")
 awful.util.spawn_with_shell("nm-applet")
+spawn_once("telegram",               "Telegram",      tags[1][1])
+spawn_once("skypeforlinux",          "skypeforlinux", tags[1][1])
+spawn_once("gvim --servername orig", "Gvim",          tags[1][3])
+spawn_once("term",                   "URxvt",         tags[1][4])
+spawn_once("firefox",                "Firefox",       tags[1][5])
+spawn_once("thunderbird",            "Thunderbird",   tags[1][6])
+spawn_once("git-cola",               "Git-cola",      tags[1][9])
 
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
