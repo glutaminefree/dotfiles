@@ -324,7 +324,8 @@ globalkeys = awful.util.table.join(
 
     awful.key({ }, "Alt_R", function() kbdcfg:next() end ),
     awful.key({ }, "ISO_Next_Group", function() kbdcfg:next() end ),
-    awful.key({ }, "Print", function () awful.util.spawn("scrot -e 'mv $f ~/screenshots/ 2>/dev/null'") end)
+    awful.key({ }, "Print", function () awful.util.spawn("scrot -e 'mv $f ~/screenshots/ 2>/dev/null'") end),
+    awful.key({ modkey }, "v", function () awful.util.spawn("urxvt256c-ml -e alsamixer") end)
 )
 
 clientkeys = awful.util.table.join(
