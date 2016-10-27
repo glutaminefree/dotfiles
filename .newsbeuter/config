@@ -1,0 +1,25 @@
+browser firefox %u
+
+# Keys {
+bind-key j down      feedlist
+bind-key k up        feedlist
+bind-key j next      articlelist
+bind-key k prev      articlelist
+bind-key J next-feed articlelist
+bind-key K prev-feed articlelist
+bind-key j down      article
+bind-key k up        article
+# }
+
+# Colors {
+color background        default  default
+color listnormal        default  default
+color listfocus         yellow   black
+color listfocus_unread  black    yellow
+color info              default  black
+color article           default  default
+
+highlight article "^(Title):.*$"         blue  default
+highlight article "https?://[^ ]+"       red   default
+highlight article "\\[image\\ [0-9]+\\]" green default
+# }

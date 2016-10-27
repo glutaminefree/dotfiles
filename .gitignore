@@ -20,6 +20,12 @@
 !/.config/ranger/scope.sh
 !/.config/ranger/bookmarks
 
+#newsbeuter
+!/.newsbeuter
+/.newsbeuter/*
+!/.newsbeuter/config
+!/.newsbeuter/urls
+
 #vim
 !/.vim
 /.vim/*

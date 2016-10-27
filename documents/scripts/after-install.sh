@@ -24,7 +24,7 @@ sudo dnf install -y \
     vim vim-X11 ctags-etags \
     ranger highlight atool lynx mediainfo \
     filezilla poedit gimp \
-    keepassx thunderbird viewnior \
+    keepassx thunderbird viewnior newsbeuter calc \
     dropbox vlc qbittorrent \
 #vagrant plugin install vagrant-vbguest
 
@@ -75,10 +75,14 @@ sudo cp $HOMEPATH/documents/scripts/open_with_vim.sh /usr/local/bin/owv
 sudo cp $HOMEPATH/documents/scripts/translate.sh     /usr/local/bin/trans
 sudo cp $HOMEPATH/documents/scripts/start-urxvt.sh   /usr/local/bin/term
 sudo cp $HOMEPATH/documents/scripts/start-gvim.sh    /usr/local/bin/gvimx
+sudo cp $HOMEPATH/documents/scripts/caps2ctrl.sh     /usr/local/bin/caps2ctrl
+sudo cp $HOMEPATH/documents/configs/sleep.d/99nocaps /usr/lib64/pm-utils/sleep.d/99nocaps
 sudo chmod 755 /usr/local/bin/owv
 sudo chmod 755 /usr/local/bin/trans
 sudo chmod 755 /usr/local/bin/term
 sudo chmod 755 /usr/local/bin/gvimx
+sudo chmod 755 /usr/local/bin/caps2ctrl
+sudo chmod 755 /usr/lib64/pm-utils/sleep.d/99nocaps
 xrdb ~/.Xresources
 
 echo 'Done'
