@@ -83,16 +83,16 @@ local layouts =
 {
     awful.layout.suit.floating,
     awful.layout.suit.tile,
-    awful.layout.suit.tile.left,
-    awful.layout.suit.tile.bottom,
-    awful.layout.suit.tile.top,
-    awful.layout.suit.fair,
-    awful.layout.suit.fair.horizontal,
+    --awful.layout.suit.tile.left,
+    --awful.layout.suit.tile.bottom,
+    --awful.layout.suit.tile.top,
+    --awful.layout.suit.fair,
+    --awful.layout.suit.fair.horizontal,
     --awful.layout.suit.spiral,
     --awful.layout.suit.spiral.dwindle,
-    awful.layout.suit.max,
+    --awful.layout.suit.max,
     awful.layout.suit.max.fullscreen,
-    awful.layout.suit.magnifier
+    --awful.layout.suit.magnifier
 }
 -- }}}
 
@@ -503,6 +503,8 @@ awful.util.spawn_with_shell("setxkbmap -option ctrl:nocaps")
 awful.util.spawn_with_shell("dropbox start")
 awful.util.spawn_with_shell("yandex-disk start")
 awful.util.spawn_with_shell("nm-applet")
+awful.util.spawn_with_shell("xset -dpms")
+awful.util.spawn_with_shell("xset s off")
 spawn_once("telegram",               "Telegram",      tags[1][1])
 spawn_once("skypeforlinux",          "skypeforlinux", tags[1][1])
 spawn_once("gvim --servername orig", "Gvim",          tags[1][3])
