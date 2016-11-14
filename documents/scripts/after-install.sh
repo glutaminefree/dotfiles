@@ -24,7 +24,7 @@ sudo dnf install -y \
     vim vim-X11 ctags-etags \
     ranger highlight atool lynx mediainfo \
     filezilla poedit gimp \
-    keepassx thunderbird viewnior newsbeuter calc \
+    keepassx thunderbird viewnior feh newsbeuter calc \
     dropbox vlc qbittorrent \
 #vagrant plugin install vagrant-vbguest
 

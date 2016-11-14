@@ -51,7 +51,7 @@ ZSH_THEME="pygmalion"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -92,8 +92,8 @@ alias v="gvim -v --servername orig"
 alias r="ranger"
 alias :q="exit"
 alias py3="python3"
-alias ll="ls -lh"
-alias la="ls -lha"
+alias ll="ls -lh --color=auto"
+alias la="ls -lha --color=auto"
 alias upd="sudo dnf update"
 alias gck="git checkout"
 alias mc="mc -b"
