@@ -37,13 +37,6 @@ echo -n 'Press [Enter] when finished'
 read enter
 enter=''
 
-echo 'Cloning dotfiles'
-git clone git@github.com:glutaminefree/dotfiles.git
-cd dotfiles
-cp -r * ..
-cd ..
-rm -rf dotfiles
-
 echo 'Installing Powerline fonts'
 mkdir ~/tmp
 cd ~/tmp
@@ -64,6 +57,13 @@ echo 'Installing NeoBundle for Vim'
 curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh > install.sh
 sh ./install.sh
 rm install.sh
+
+echo 'Cloning dotfiles'
+git clone git@github.com:glutaminefree/dotfiles.git
+cd dotfiles
+cp -r * ..
+cd ..
+rm -rf dotfiles
 
 echo 'Disabling Plymouth graphical boot'
 sudo dnf remove plymouth -y
