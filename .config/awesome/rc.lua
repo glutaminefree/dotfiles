@@ -106,18 +106,19 @@ end
 
 -- {{{ Tags
 -- Define a tag table which hold all screen tags.
-tags = {}
+tags = {
+    names  = { "im", "etc1", "vim", "term", "www", "mail", "graphics", "ftp", "etc2" },
+    layout = { layouts[2], layouts[1], layouts[1], layouts[1], layouts[1], layouts[1], layouts[1], layouts[1], layouts[1] }
+}
 for s = 1, screen.count() do
-    -- Each screen has its own tag table.
-    tags[s] = awful.tag({ 1, 2, 3, 4, 5, 6, 7, 8, 9 }, s, layouts[1])
+    ---- Each screen has its own tag table.
+    tags[s] = awful.tag(tags.names, s, tags.layout)
 end
 -- }}}
 
 -- {{{ Menu
 -- Create a laucher widget and a main menu
 myawesomemenu = {
-   { "manual", terminal .. " -e man awesome" },
-   { "edit config", editor_cmd .. " " .. awesome.conffile },
    { "restart", awesome.restart },
    { "quit", awesome.quit }
 }
@@ -511,7 +512,7 @@ spawn_once("gvim --servername orig", "Gvim",          tags[1][3])
 spawn_once("term",                   "URxvt",         tags[1][4])
 spawn_once("firefox",                "Firefox",       tags[1][5])
 spawn_once("thunderbird",            "Thunderbird",   tags[1][6])
-spawn_once("git-cola",               "Git-cola",      tags[1][9])
+--spawn_once("git-cola",               "Git-cola",      tags[1][9])
 
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
