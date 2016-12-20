@@ -1,78 +1,77 @@
 snippet php
-	<?php ${1} ?>
+	<?php ${0} ?>
 snippet php2
 	<?php
-    ${1}
+    ${0}
 snippet php3
 	<?php
-    ${1}
+    ${0}
     ?>
 snippet php4
-	<?= ${1} ?>
+	<?= ${0} ?>
 snippet ifdev
 	if ( !empty($_COOKIE['dev']) ) {
-		${1}
+		${0}
 	}
 snippet iff
 	<?php if ( false ) { ?>
-		${1}
+		${0}
 	<?php } ?>
 snippet end
 	<?php } ?>
 snippet phputf
 	header('Content-Type: text/html; charset=utf-8');
 snippet prd
-	print_r(${1});
+	print_r(${0});
 	die(PHP_EOL);
 snippet ppr
     echo '<pre>';
-	print_r(${1});
+	print_r(${0});
     echo '</pre>'.PHP_EOL;
 snippet pprd
     echo '<pre>';
-	print_r(${1});
+	print_r(${0});
     echo '</pre>'.PHP_EOL;
 	die;
 snippet dump
-    file_put_contents('/home/glutaminefree/job/${1}', print_r($var, true));
+    file_put_contents('/home/glutaminefree/job/${0}', print_r($var, true));
     die;
 snippet rf
     return false;
 snippet wpph
     <?php
     /**
-     * Template Name: ${1}
+     * Template Name: ${0}
      */
 
     get_header();
     ?>
-    ${2}
 snippet eg
-    <?php echo _(${1}); ?>
+    <?php echo _(${0}); ?>
 snippet rg
-    <?php _(${1}); ?>
+    <?php _(${0}); ?>
 snippet echo
-    <?php echo ${1}; ?>
+    <?php echo ${0}; ?>
 snippet ob
     ob_start();
-    ${1}
+    ${0}
     $output = ob_get_clean();
 
 snippet utf8
 	<meta charset="utf-8" />
 snippet css
-	<link rel="stylesheet" href="${1}" />
+	<link rel="stylesheet" href="${0}" />
 snippet js
-	<script type="text/javascript">${1}</script>
+	<script type="text/javascript">${0}</script>
 snippet jssrc
-	<script type="text/javascript" src="${1}"></script>
+	<script type="text/javascript" src="${0}"></script>
 snippet ready
 	<script type="text/javascript">
 		jQuery(function($){
-            ${1}
+            ${0}
 		});
 	</script>
 snippet readyjs
     document.addEventListener('DOMContentLoaded', function(){
-        ${1}
+        ${0}
     });

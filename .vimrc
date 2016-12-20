@@ -20,7 +20,7 @@ source ~/.vimrc-tabline
         let g:mta_filetypes = {'html':1,'php':1,'xhtml':1,'xml':1,}
     " }
     " Airline {
-        let g:airline_extensions = ['branch']
+        "let g:airline_extensions = ['branch']
         let g:airline_powerline_fonts = 1
     " }
     " PDV {
@@ -52,14 +52,14 @@ source ~/.vimrc-tabline
     " Other settings {
         set guioptions+=c
         set guioptions-=T
-        set guioptions-=m
         set guioptions-=r
+        set guioptions-=L
+        set guioptions-=m
         set guioptions-=b
         set guioptions-=R
-        set guioptions-=L
         set guioptions-=e
         set guioptions-=F
-        set guifont=Monofur\ for\ Powerline\ 12
+        set guifont=Monofur\ for\ Powerline\ 11
 
         set number " Show line numbers
         set nowrap " Disable text wrap

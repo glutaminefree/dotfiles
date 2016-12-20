@@ -21,7 +21,7 @@
         " appearance {
             NeoBundle 'vim-airline/vim-airline'
             NeoBundle 'vim-airline/vim-airline-themes'
-            NeoBundle 'tpope/vim-fugitive'
+            "NeoBundle 'tpope/vim-fugitive'
         " }
 
         " programming helpers {
@@ -42,10 +42,7 @@
 
         " syntax {
             NeoBundle 'sheerun/vim-polyglot'
-            NeoBundle 'c9s/vim-twig'
-            NeoBundle 'groenewege/vim-less'
             NeoBundle 'dzeban/vim-log-syntax'
-            NeoBundle 'ekalinin/Dockerfile.vim'
         " }
 
         " other {

@@ -17,13 +17,13 @@ sudo dnf install -y \
     http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 sudo dnf update -y
 sudo dnf install -y \
-    rxvt-unicode-256color-ml network-manager-applet acpi \
+    rxvt-unicode-256color-ml network-manager-applet parcellite acpi \
     make gcc \
     #vagrant VirtualBox{from Oracle repo} kernel-devel dkms \
     zsh git git-cola htop wget scrot \
     vim vim-X11 ctags-etags \
     ranger highlight atool lynx mediainfo \
-    filezilla poedit gimp \
+    filezilla poedit hunspell-ru gimp \
     keepassx thunderbird viewnior feh newsbeuter calc \
     dropbox vlc qbittorrent \
 #vagrant plugin install vagrant-vbguest

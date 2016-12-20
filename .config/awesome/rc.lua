@@ -420,13 +420,7 @@ awful.rules.rules = {
       properties = { floating = true } },
     { rule = { class = "gimp" },
       properties = { floating = true } },
-    -- Set Firefox to always map on tags number 2 of screen 1.
-    -- { rule = { class = "Firefox" },
-    --   properties = { tag = tags[1][2] } },
-    --{ rule = { class = "Gvim" }, properties = { tag = tags[1][3] } },
-    --{ rule = { class = "Firefox" }, properties = { tag = tags[1][5] } },
-    --{ rule = { class = "Thunderbird" }, properties = { tag = tags[1][6] } },
-    --{ rule = { class = "Git_Cola" }, properties = { tag = tags[1][9] } },
+    { rule = { class = "Telegram" }, properties = { tag = tags[1][1] } },
 }
 -- }}}
 
@@ -504,15 +498,14 @@ awful.util.spawn_with_shell("setxkbmap -option ctrl:nocaps")
 awful.util.spawn_with_shell("dropbox start")
 awful.util.spawn_with_shell("yandex-disk start")
 awful.util.spawn_with_shell("nm-applet")
+awful.util.spawn_with_shell("parcellite")
 awful.util.spawn_with_shell("xset -dpms")
 awful.util.spawn_with_shell("xset s off")
-spawn_once("telegram",               "Telegram",      tags[1][1])
-spawn_once("skypeforlinux",          "skypeforlinux", tags[1][1])
-spawn_once("gvim --servername orig", "Gvim",          tags[1][3])
-spawn_once("term",                   "URxvt",         tags[1][4])
-spawn_once("firefox",                "Firefox",       tags[1][5])
-spawn_once("thunderbird",            "Thunderbird",   tags[1][6])
---spawn_once("git-cola",               "Git-cola",      tags[1][9])
+spawn_once("telegram",               "Telegram",    tags[1][1])
+spawn_once("gvim --servername orig", "Gvim",        tags[1][3])
+spawn_once("term",                   "URxvt",       tags[1][4])
+spawn_once("firefox",                "Firefox",     tags[1][5])
+spawn_once("thunderbird",            "Thunderbird", tags[1][6])
 
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
