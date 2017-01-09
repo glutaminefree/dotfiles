@@ -97,6 +97,11 @@ source ~/.vimrc-tabline
         au BufWinEnter *.* silent loadview " Restore buffer view on buffer opening
         " }
 
+        " Set filetypes {
+        au BufNewFile,BufRead *.js set syntax=javascript
+        au BufNewFile,BufRead .vim* set syntax=vim
+        " }
+
         " Netrw {
         let g:netrw_liststyle=3
         " }
