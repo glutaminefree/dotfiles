@@ -20,7 +20,7 @@ sudo dnf install -y \
     rxvt-unicode-256color-ml network-manager-applet parcellite acpi \
     make gcc \
     #vagrant VirtualBox{from Oracle repo} kernel-devel dkms \
-    zsh git git-cola htop wget scrot \
+    zsh git git-cola htop wget curl scrot \
     vim vim-X11 ctags-etags \
     ranger highlight atool lynx mediainfo \
     filezilla poedit hunspell-ru gimp \
@@ -48,6 +48,10 @@ cd ..
 rm -rf fonts
 cd ~
 
+echo 'Installing NodeJS'
+curl --silent --location https://rpm.nodesource.com/setup_6.x | bash -
+sudo dnf install nodejs npm
+
 echo 'Installing Oh My Zsh'
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 mkdir $HOMEPATH/.oh-my-zsh/custom/themes/ -p
@@ -64,6 +68,8 @@ cd dotfiles
 cp -r * ..
 cd ..
 rm -rf dotfiles
+
+mkdir ~/screenshots/
 
 echo 'Disabling Plymouth graphical boot'
 sudo dnf remove plymouth -y
