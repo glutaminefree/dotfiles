@@ -16,6 +16,9 @@ source ~/.vimrc-tabline
         let NERDTreeShowHidden = 1
         "autocmd vimenter * NERDTree
     " }
+    " NerdTree {
+    let g:nerdtree_tabs_focus_on_files = 1
+    " }
     " MatchTagAlways {
         let g:mta_filetypes = {'html':1,'php':1,'xhtml':1,'xml':1,}
     " }
