@@ -68,9 +68,11 @@ source ~/.vimrc-tabline
         set nowrap " Disable text wrap
         set showtabline=2
         set autochdir
+        set autoread " Auto reload files on change
         set encoding=utf-8
         set fileencodings=utf-8,cp1251,koi8-r,cp866
         set termencoding=utf-8
+        set incsearch " Jump while typing
         set ignorecase " Ignore case when searching
         set smartcase " Ignore prev options if search for different case symbols
         set backupdir=/home/glutaminefree/.vim/tmp,/tmp
@@ -80,6 +82,7 @@ source ~/.vimrc-tabline
         set laststatus=2 " Always show statusbar
         set noshowmode
 
+        " Identation {
         set expandtab
         set tabstop=4
         set shiftwidth=4
@@ -87,6 +90,7 @@ source ~/.vimrc-tabline
         set smarttab
         set smartindent
         set autoindent
+        " }
 
         " Code folding {
         set foldmethod=indent
