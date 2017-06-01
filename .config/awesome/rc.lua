@@ -158,7 +158,7 @@ batterywidget:set_text(batteryInfo("BAT0"))
 
 -- {{{ Wibox
 -- Create a textclock widget
-mytextclock = awful.widget.textclock()
+mytextclock = awful.widget.textclock("%a %d.%m %H:%M  ", 60)
 
 -- Create a wibox for each screen and add it
 mywibox = {}
