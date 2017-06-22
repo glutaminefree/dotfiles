@@ -43,6 +43,7 @@
         " syntax {
             NeoBundle 'sheerun/vim-polyglot'
             NeoBundle 'dzeban/vim-log-syntax'
+            NeoBundle 'gko/vim-coloresque'
         " }
 
         " other {

@@ -6,7 +6,7 @@ source ~/.vimrc-tabline
         let g:user_emmet_leader_key='<C-E>'
     " }
     " delimMate {
-        let delimitMate_expand_cr = 1
+        let g:delimitMate_expand_cr=0
     " }
     " NeoSnippet {
         let g:neosnippet#snippets_directory='~/.vim/snippets'
@@ -17,7 +17,7 @@ source ~/.vimrc-tabline
         "autocmd vimenter * NERDTree
     " }
     " NerdTree {
-    let g:nerdtree_tabs_focus_on_files = 1
+        let g:nerdtree_tabs_focus_on_files = 1
     " }
     " MatchTagAlways {
         let g:mta_filetypes = {'html':1,'php':1,'xhtml':1,'xml':1,}
@@ -81,6 +81,8 @@ source ~/.vimrc-tabline
         set completeopt-=preview " No preview on omni completion
         set laststatus=2 " Always show statusbar
         set noshowmode
+        set splitright " Open split at right and bottom
+        set splitbelow
 
         " Identation {
         set expandtab
