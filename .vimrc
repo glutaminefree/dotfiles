@@ -16,8 +16,29 @@ source ~/.vimrc-tabline
         let NERDTreeShowHidden = 1
         "autocmd vimenter * NERDTree
     " }
-    " NerdTree {
+    " NerdTreeTabs {
         let g:nerdtree_tabs_focus_on_files = 1
+    " }
+    " NerdCommenter {
+        let g:ft = ''
+        function! NERDCommenter_before()
+            if &ft == 'vue'
+                let g:ft = 'vue'
+                let stack = synstack(line('.'), col('.'))
+                if len(stack) > 0
+                    let syn = synIDattr((stack)[0], 'name')
+                    if len(syn) > 0
+                        exe 'setf ' . substitute(tolower(syn), '^vue_', '', '')
+                    endif
+                endif
+            endif
+        endfunction
+        function! NERDCommenter_after()
+            if g:ft == 'vue'
+                setf vue
+                let g:ft = ''
+            endif
+        endfunction
     " }
     " MatchTagAlways {
         let g:mta_filetypes = {'html':1,'php':1,'xhtml':1,'xml':1,}
@@ -37,6 +58,9 @@ source ~/.vimrc-tabline
         let Tlist_Exit_OnlyWindow         = 1
         "let Tlist_File_Fold_Auto_Close    = 1
         let Tlist_Show_One_File           = 1
+    " }
+    " VimVue {
+        au FileType vue syntax sync fromstart
     " }
 
     " Colorsheme {

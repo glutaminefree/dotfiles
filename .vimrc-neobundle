@@ -42,6 +42,7 @@
 
         " syntax {
             NeoBundle 'sheerun/vim-polyglot'
+            NeoBundle 'posva/vim-vue'
             NeoBundle 'dzeban/vim-log-syntax'
             NeoBundle 'gko/vim-coloresque'
         " }
