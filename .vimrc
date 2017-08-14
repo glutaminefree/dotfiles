@@ -96,6 +96,7 @@ source ~/.vimrc-tabline
         set encoding=utf-8
         set fileencodings=utf-8,cp1251,koi8-r,cp866
         set termencoding=utf-8
+        set iskeyword-=.
         set incsearch " Jump while typing
         set ignorecase " Ignore case when searching
         set smartcase " Ignore prev options if search for different case symbols
@@ -107,6 +108,7 @@ source ~/.vimrc-tabline
         set noshowmode
         set splitright " Open split at right and bottom
         set splitbelow
+        set colorcolumn=142 " Vertical guide line
 
         " Identation {
         set expandtab
@@ -152,6 +154,9 @@ source ~/.vimrc-tabline
         nnoremap <C-j> <Esc>
 
         inoremap <C-p> <C-r>"
+
+        "vnoremap <C-_> <Plug>NERDComToggleComment<CR>
+        "nnoremap <C-_> <Plug>NERDComToggleComment<CR>
 
         vnoremap <C-E> nooperator
 

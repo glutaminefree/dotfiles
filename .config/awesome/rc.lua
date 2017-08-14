@@ -323,10 +323,14 @@ globalkeys = awful.util.table.join(
     -- Menubar
     awful.key({ modkey }, "p", function() menubar.show() end),
 
-    awful.key({ }, "Alt_R", function() kbdcfg:next() end ),
-    awful.key({ }, "ISO_Next_Group", function() kbdcfg:next() end ),
-    awful.key({ }, "Print", function () awful.util.spawn("scrot -e 'mv $f ~/screenshots/ 2>/dev/null'") end),
-    awful.key({ modkey }, "v", function () awful.util.spawn("urxvt256c-ml -e alsamixer") end)
+    -- etc
+    awful.key({ }, "Print",    function() awful.util.spawn("scrot -e 'mv $f ~/screenshots/ 2>/dev/null'") end),
+    awful.key({ modkey }, "v", function() awful.util.spawn("urxvt256c-ml -e alsamixer") end),
+    -- defender keyboard
+    awful.key({ "Shift_R" }, "Control_R", function() kbdcfg:next() end ),
+    -- hp laptop keyboard
+    awful.key({ }, "Alt_R",          function() kbdcfg:next() end ),
+    awful.key({ }, "ISO_Next_Group", function() kbdcfg:next() end )
 )
 
 clientkeys = awful.util.table.join(
@@ -502,7 +506,7 @@ awful.util.spawn_with_shell("parcellite")
 awful.util.spawn_with_shell("xset -dpms")
 awful.util.spawn_with_shell("xset s off")
 --spawn_once("telegram",               "Telegram",       tags[1][1])
-spawn_once("gvim --servername orig", "Gvim",           tags[1][3])
+--spawn_once("gvim --servername orig", "Gvim",           tags[1][3])
 spawn_once("term",                   "URxvt",          tags[1][4])
 --spawn_once("gnome-terminal",         "Gnome-terminal", tags[1][4])
 --spawn_once("firefox",                "Firefox",        tags[1][5])

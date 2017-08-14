@@ -87,6 +87,7 @@ export EDITOR=vim
 export GOPATH=~/documents/go-packages
 export PATH=$PATH:$GOPATH/bin
 export VAGRANT_DEFAULT_PROVIDER=virtualbox
+export LC_TIME=en_GB.UTF-8
 
 alias v="gvim -v --servername orig"
 alias r="ranger"
