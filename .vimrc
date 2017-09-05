@@ -167,8 +167,8 @@ source ~/.vimrc-tabline
         nnoremap  <F2> :NERDTreeTabsToggle<CR>
         nnoremap  <F3> :let @+ = expand("%:p")<CR> " Copy filename to clipboard
         set pastetoggle=<F4>
-        nnoremap  <F5> :call pdv#DocumentCurrentLine()<CR>
-        vnoremap  <F6> :Tabularize /=><CR>
+        nnoremap  <F5> :syntax sync fromstart<CR>
+        vnoremap  <F6> :Tabularize /=
         nnoremap  <F7> /\s\+$<CR> " Highlight trailing spaces
         nnoremap  <F8> :!php -l %<CR>
         nnoremap  <F9> :!php %<CR>

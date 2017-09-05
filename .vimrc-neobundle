@@ -15,13 +15,11 @@
     " Bundles {
         " colorschemes {
             NeoBundle 'altercation/vim-colors-solarized'
-            NeoBundle 'sickill/vim-monokai'
         " }
 
         " appearance {
             NeoBundle 'vim-airline/vim-airline'
             NeoBundle 'vim-airline/vim-airline-themes'
-            "NeoBundle 'tpope/vim-fugitive'
         " }
 
         " programming helpers {
@@ -34,16 +32,13 @@
             NeoBundle 'Raimondi/delimitMate'
             NeoBundle 'kazy1991/simple-browser.vim'
             NeoBundle 'godlygeek/tabular'
-            NeoBundle 'tobyS/pdv', {"depends": "tobyS/vmustache"}
             NeoBundle 'mattn/emmet-vim'
-            NeoBundle 'valloric/MatchTagAlways'
             NeoBundle 'tmhedberg/matchit'
         " }
 
         " syntax {
             NeoBundle 'sheerun/vim-polyglot'
             NeoBundle 'posva/vim-vue'
-            NeoBundle 'dzeban/vim-log-syntax'
             NeoBundle 'gko/vim-coloresque'
         " }
 
