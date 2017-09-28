@@ -50,6 +50,7 @@
 /documents/*
 !/documents/scripts
 !/documents/configs
+/documents/configs/prosto.insure/*
 
 #files
 !.gitconfig

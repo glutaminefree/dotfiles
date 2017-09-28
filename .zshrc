@@ -99,3 +99,5 @@ alias upd="sudo dnf update"
 alias gck="git checkout"
 alias mc="mc -b"
 alias gitpush="git pull; git push origin master"
+
+[ -f .zshrc-prostoinsure ] && source .zshrc-prostoinsure
