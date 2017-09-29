@@ -100,4 +100,4 @@ alias gck="git checkout"
 alias mc="mc -b"
 alias gitpush="git pull; git push origin master"
 
-[ -f .zshrc-prostoinsure ] && source .zshrc-prostoinsure
+[ -f ~/.zshrc-prostoinsure ] && source ~/.zshrc-prostoinsure
