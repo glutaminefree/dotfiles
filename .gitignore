@@ -7,6 +7,14 @@
 #awesome
 !/.config/awesome
 
+#kde
+!/.config/konsolerc
+!/.local
+/.local/*
+!/.local/share
+/.local/share/*
+!/.local/share/konsole
+
 #htop
 !/.config/htop
 /.config/htop/*
