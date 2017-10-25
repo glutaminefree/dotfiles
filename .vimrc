@@ -140,6 +140,11 @@ source ~/.vimrc-tabline
         " Netrw {
         let g:netrw_liststyle=3
         " }
+
+        " Restore syntax highlighting in Vue files {
+        au FileType vue syntax sync fromstart
+        au BufWinEnter *.vue syntax sync fromstart
+        " }
     " }
 
     " Shortcuts {

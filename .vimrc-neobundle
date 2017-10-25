@@ -30,10 +30,10 @@
             NeoBundle 'Shougo/neosnippet'
             NeoBundle 'Shougo/neosnippet-snippets'
             NeoBundle 'Raimondi/delimitMate'
-            NeoBundle 'kazy1991/simple-browser.vim'
+            "NeoBundle 'kazy1991/simple-browser.vim'
             NeoBundle 'godlygeek/tabular'
-            NeoBundle 'mattn/emmet-vim'
-            NeoBundle 'tmhedberg/matchit'
+            "NeoBundle 'mattn/emmet-vim'
+            "NeoBundle 'tmhedberg/matchit'
         " }
 
         " syntax {
