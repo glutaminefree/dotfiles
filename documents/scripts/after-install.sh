@@ -18,7 +18,7 @@ sudo dnf install -y \
 sudo dnf update -y
 sudo dnf install -y \
     rxvt-unicode-256color-ml network-manager-applet parcellite acpi \
-    make gcc \
+    make gcc gcc-c++\
     #vagrant VirtualBox{from Oracle repo} kernel-devel dkms \
     zsh git git-cola htop wget curl scrot \
     vim vim-X11 ctags-etags \
