@@ -44,7 +44,7 @@ end
 beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "xterm"
+terminal = "urxvt256c-ml"
 editor = os.getenv("EDITOR") or "vi"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -114,7 +114,12 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 -- }}}
 
 -- Keyboard map indicator and switcher
-mykeyboardlayout = awful.widget.keyboardlayout()
+local keyboard_layout = require("keyboard_layout")
+local kbdcfg = keyboard_layout.kbdcfg({type = "tui"})
+
+kbdcfg.add_primary_layout("English", "US", "us")
+kbdcfg.add_primary_layout("Русский", "RU", "ru")
+kbdcfg.bind()
 
 -- {{{ Wibar
 -- Create a textclock widget
@@ -216,9 +221,12 @@ awful.screen.connect_for_each_screen(function(s)
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
-            mykeyboardlayout,
+            kbdcfg.widget,
             wibox.widget.systray(),
             mytextclock,
+            wibox.widget.textbox(" ["),
+            require("battery-widget") {},
+            wibox.widget.textbox("] "),
             s.mylayoutbox,
         },
     }
@@ -331,7 +339,10 @@ globalkeys = gears.table.join(
               {description = "lua execute prompt", group = "awesome"}),
     -- Menubar
     awful.key({ modkey }, "p", function() menubar.show() end,
-              {description = "show the menubar", group = "launcher"})
+              {description = "show the menubar", group = "launcher"}),
+
+    -- Lang switch
+    awful.key({ }, "Alt_R", function () kbdcfg.switch_next() end)
 )
 
 clientkeys = gears.table.join(
@@ -558,3 +569,7 @@ end)
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
+
+-- Autorun
+awful.spawn("setxkbmap -option ctrl:nocaps")
+awful.spawn("nm-applet")
