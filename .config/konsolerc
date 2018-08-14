@@ -1,0 +1,24 @@
+[Desktop Entry]
+DefaultProfile=terminal-profile.profile
+
+[Favorite Profiles]
+Favorites=
+
+[KFileDialog Settings]
+Recent Files[$e]=konsole-tabs.css,file:$HOME/documents/configs/kde/konsole-tabs.css
+Recent URLs[$e]=file:$HOME/documents/configs/kde/
+
+[KonsoleWindow]
+ShowMenuBarByDefault=false
+
+[MainWindow]
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAAAAB4AAAAQUAAAABAAAAAQAAAAIAAAACPwAAAAA
+ToolBarsMovable=Disabled
+Window-Maximized 1080x1920=true
+
+[TabBar]
+TabBarPosition=Top
+TabBarUseUserStyleSheet=true
+TabBarUserStyleSheetFile=file:///home/glutaminefree/documents/configs/kde/konsole-tabs.css
+TabBarVisibility=ShowTabBarWhenNeeded
