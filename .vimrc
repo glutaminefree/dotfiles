@@ -6,7 +6,7 @@ source ~/.vimrc-tabline
         let g:user_emmet_leader_key='<C-E>'
     " }
     " delimMate {
-        let g:delimitMate_expand_cr=0
+        let g:delimitMate_expand_cr=1
     " }
     " NeoSnippet {
         let g:neosnippet#snippets_directory='~/.vim/snippets'

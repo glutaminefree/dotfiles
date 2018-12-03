@@ -12,9 +12,11 @@ Recent URLs[$e]=file:$HOME/documents/configs/kde/
 ShowMenuBarByDefault=false
 
 [MainWindow]
+Height 1080=1044
 MenuBar=Disabled
 State=AAAA/wAAAAD9AAAAAAAAB4AAAAQUAAAABAAAAAQAAAAIAAAACPwAAAAA
 ToolBarsMovable=Disabled
+Width 1920=1920
 Window-Maximized 1080x1920=true
 
 [TabBar]
