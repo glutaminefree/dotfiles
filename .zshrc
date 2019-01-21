@@ -111,5 +111,6 @@ alias upd="sudo dnf update"
 alias gck="git checkout"
 alias mc="mc -b"
 alias gitpush="git pull; git push origin master"
+alias grp="grep --exclude-dir=\"node_modules\" -RFn"
 
 [ -f ~/.zshrc-prostoinsure ] && source ~/.zshrc-prostoinsure
