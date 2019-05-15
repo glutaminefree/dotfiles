@@ -1,5 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$PATH:$HOME/.config/composer/vendor/bin
 
 # Path to your oh-my-zsh installation.
   export ZSH="/home/glutaminefree/.oh-my-zsh"
@@ -110,7 +111,5 @@ alias la="ls -lha --color=auto"
 alias upd="sudo dnf update"
 alias gck="git checkout"
 alias mc="mc -b"
-alias gitpush="git pull; git push origin master"
+alias gitpush="git pull; git push"
 alias grp="grep --exclude-dir=\"node_modules\" -RFn"
-
-[ -f ~/.zshrc-prostoinsure ] && source ~/.zshrc-prostoinsure
