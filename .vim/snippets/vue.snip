@@ -5,4 +5,4 @@ snippet rt
 snippet log
 	console.log(${0});
 snippet vuelog
-	console.log(JSON.parse(JSON.stringify(${0})));
+	console.log(JSON.stringify(${0}, null, 2));
