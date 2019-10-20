@@ -113,4 +113,7 @@ alias gck="git checkout"
 alias gpt="git push origin --tags"
 alias mc="mc -b"
 alias gitpush="git pull; git push"
+alias gitlog="git log --all --decorate --oneline --graph"
 alias grp="grep --exclude-dir=\"node_modules\" -RFn"
+
+[ -f ~/.zshrc-additional ] && source ~/.zshrc-additional
