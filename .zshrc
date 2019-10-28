@@ -1,9 +1,12 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=$PATH:$HOME/.config/composer/vendor/bin
+NPM_PACKAGES="${HOME}/.npm-packages"
+
+export PATH="$PATH:$NPM_PACKAGES/bin"
+export MANPATH="${MANPATH-$(manpath)}:$NPM_PACKAGES/share/man"
 
 # Path to your oh-my-zsh installation.
-  export ZSH="/home/glutaminefree/.oh-my-zsh"
+export ZSH="/home/glutaminefree/.oh-my-zsh"
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
