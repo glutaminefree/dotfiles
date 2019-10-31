@@ -4,3 +4,5 @@
 [gui]
 	editor = /usr/bin/gvim -v --servername orig --remote-tab
 	historybrowser = gitk
+[cola]
+	spellcheck = true

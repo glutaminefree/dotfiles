@@ -1,59 +1,60 @@
-" NeoBundle Scripts {
-    if has('vim_starting')
-        set nocompatible " Be iMproved
-        " Required:
-        set runtimepath+=/home/glutaminefree/.vim/bundle/neobundle.vim/
-    endif
+"NeoBundle Scripts-----------------------------
+if &compatible
+  set nocompatible               " Be iMproved
+endif
 
-    " Required:
-    call neobundle#begin(expand('/home/glutaminefree/.vim/bundle'))
+" Required:
+set runtimepath+=/home/glutaminefree/.vim/bundle/neobundle.vim/
 
-    " Let NeoBundle manage NeoBundle
-    " Required:
-    NeoBundleFetch 'Shougo/neobundle.vim'
+" Required:
+call neobundle#begin(expand('/home/glutaminefree/.vim/bundle'))
 
-    " Bundles {
-        " colorschemes {
-            NeoBundle 'altercation/vim-colors-solarized'
-        " }
+" Let NeoBundle manage NeoBundle
+" Required:
+NeoBundleFetch 'Shougo/neobundle.vim'
 
-        " appearance {
-            NeoBundle 'vim-airline/vim-airline'
-            NeoBundle 'vim-airline/vim-airline-themes'
-        " }
+" Bundles {
+  " colorschemes {
+    NeoBundle 'altercation/vim-colors-solarized'
+  " }
 
-        " programming helpers {
-            NeoBundle 'scrooloose/nerdtree'
-            NeoBundle 'jistr/vim-nerdtree-tabs'
-            NeoBundle 'scrooloose/nerdcommenter'
-            "NeoBundle 'vim-scripts/taglist.vim'
-            NeoBundle 'Shougo/neosnippet'
-            NeoBundle 'Shougo/neosnippet-snippets'
-            NeoBundle 'Raimondi/delimitMate'
-            "NeoBundle 'kazy1991/simple-browser.vim'
-            NeoBundle 'godlygeek/tabular'
-            "NeoBundle 'mattn/emmet-vim'
-            "NeoBundle 'tmhedberg/matchit'
-        " }
+  " appearance {
+    NeoBundle 'vim-airline/vim-airline'
+    NeoBundle 'vim-airline/vim-airline-themes'
+  " }
 
-        " syntax {
-            NeoBundle 'sheerun/vim-polyglot'
-            NeoBundle 'posva/vim-vue'
-            NeoBundle 'gko/vim-coloresque'
-        " }
+  " programming helpers {
+    NeoBundle 'scrooloose/nerdtree'
+    NeoBundle 'jistr/vim-nerdtree-tabs'
+    NeoBundle 'scrooloose/nerdcommenter'
+    "NeoBundle 'vim-scripts/taglist.vim'
+    NeoBundle 'Shougo/neosnippet'
+    NeoBundle 'Shougo/neosnippet-snippets'
+    NeoBundle 'Raimondi/delimitMate'
+    "NeoBundle 'kazy1991/simple-browser.vim'
+    NeoBundle 'godlygeek/tabular'
+    "NeoBundle 'mattn/emmet-vim'
+    "NeoBundle 'tmhedberg/matchit'
+  " }
 
-        " other {
-            NeoBundle 'Shougo/vimproc.vim', {'build': {'linux': 'make', 'unix': 'gmake'}}
-        " }
-    "}
+  " syntax {
+    NeoBundle 'sheerun/vim-polyglot'
+    NeoBundle 'posva/vim-vue'
+    NeoBundle 'gko/vim-coloresque'
+  " }
 
-    " Required:
-    call neobundle#end()
+  " other {
+    NeoBundle 'Shougo/vimproc.vim', {'build': {'linux': 'make', 'unix': 'gmake'}}
+  " }
+"}
 
-    " Required:
-    filetype plugin indent on
+" Required:
+call neobundle#end()
 
-    " If there are uninstalled bundles found on startup,
-    " this will conveniently prompt you to install them.
-    NeoBundleCheck
-" }
+" Required:
+filetype plugin indent on
+
+" If there are uninstalled bundles found on startup,
+" this will conveniently prompt you to install them.
+NeoBundleCheck
+"End NeoBundle Scripts-------------------------

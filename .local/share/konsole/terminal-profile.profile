@@ -1,5 +1,5 @@
 [Appearance]
-ColorScheme=Breeze
+ColorScheme=DarkPastels
 
 [General]
 Command=/bin/zsh
@@ -8,4 +8,4 @@ Parent=FALLBACK/
 
 [Scrolling]
 HistorySize=4000
-ScrollBarPosition=2
+ScrollBarPosition=1

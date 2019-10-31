@@ -86,7 +86,7 @@ source ~/.vimrc-tabline
         set guioptions-=R
         set guioptions-=e
         set guioptions-=F
-        set guifont=Monofur\ for\ Powerline\ 11
+        set guifont=Monofur\ 12
 
         set number " Show line numbers
         set nowrap " Disable text wrap
