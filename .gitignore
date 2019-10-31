@@ -65,6 +65,7 @@
 !.gitignore
 !.vimperatorrc
 !.vimrc*
+!.npmrc
 !.wegorc
 !.zshrc
 !.Xdefaults
