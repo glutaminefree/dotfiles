@@ -8,4 +8,4 @@ Parent=FALLBACK/
 
 [Scrolling]
 HistorySize=4000
-ScrollBarPosition=1
+ScrollBarPosition=2

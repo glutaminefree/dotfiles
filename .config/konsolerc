@@ -13,3 +13,6 @@ MenuBar=Disabled
 State=AAAA/wAAAAD9AAAAAAAAB4AAAAQUAAAABAAAAAQAAAAIAAAACPwAAAAA
 ToolBarsMovable=Disabled
 Window-Maximized 1080x1920=true
+
+[Notification Messages]
+CloseAllTabs=true
