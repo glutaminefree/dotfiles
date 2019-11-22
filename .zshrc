@@ -119,6 +119,7 @@ alias mc="mc -b"
 alias gck="git checkout"
 alias gpt="git push origin --tags"
 alias gitpush="git pull; git push"
+alias gitmm="gck master; git merge develop --no-ff; git push; gck develop"
 alias gitlog="git log --all --decorate --oneline --graph"
 alias gd="git diff HEAD"
 
