@@ -2,7 +2,7 @@
 	name = glutaminefree
 	email = glutaminefree@mail.ru
 [gui]
-	editor = /usr/bin/gvim -v --servername orig --remote-tab
+	editor = atom
 	historybrowser = gitk
 [cola]
 	spellcheck = true
