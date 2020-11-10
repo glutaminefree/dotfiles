@@ -6,3 +6,4 @@
 	historybrowser = gitk
 [cola]
 	spellcheck = true
+	expandtab = true

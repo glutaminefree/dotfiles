@@ -1,8 +1,8 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-NPM_PACKAGES="${HOME}/.npm-packages"
+NPM_PACKAGES="${HOME}/.npm-packages/bin"
 
-export PATH="$PATH:$NPM_PACKAGES/bin"
+export PATH="$PATH:$NPM_PACKAGES"
 export MANPATH="${MANPATH-$(manpath)}:$NPM_PACKAGES/share/man"
 
 # Path to your oh-my-zsh installation.
@@ -122,5 +122,7 @@ alias gitpush="git pull; git push"
 alias gitmm="gck master; git merge develop --no-ff; git push; gck develop"
 alias gitlog="git log --all --decorate --oneline --graph"
 alias gd="git diff HEAD"
+alias docker="podman"
+alias docker-compose="podman-compose"
 
 [ -f ~/.zshrc-additional ] && source ~/.zshrc-additional

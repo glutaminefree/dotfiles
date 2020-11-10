@@ -61,6 +61,8 @@ source ~/.vimrc-tabline
     " }
     " VimVue {
         au FileType vue syntax sync fromstart
+        let g:vue_pre_processors = 'detect_on_enter'
+        "let g:vue_pre_processors = ['pug', 'scss']
     " }
 
     " Colorsheme {
@@ -108,7 +110,7 @@ source ~/.vimrc-tabline
         set noshowmode
         set splitright " Open split at right and bottom
         set splitbelow
-        set colorcolumn=142 " Vertical guide line
+        set colorcolumn=100 " Vertical guide line
 
         " Identation {
         set expandtab
