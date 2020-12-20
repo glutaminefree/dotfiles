@@ -1,15 +1,32 @@
 snippet rf
-    return false;${0}
+  return false;${0}
 snippet rt
-    return true;${0}
+  return true;${0}
 snippet log
 	console.log(${0});
 snippet vuelog
 	console.log(JSON.stringify(${0}, null, 2));
 snippet ed
 	export default {${0}};
+snippet vuebase
+  <template lang="pug">
+  </template>
+
+  <script>
+  export default {
+    name: '${0}',
+  };
+  </script>
+
+  <style lang="scss" scoped>
+  </style>
+snippet vuedata
+  data() {
+    return {
+      ${0}
+    };
+  },
 
 snippet media
-    @media (max-width: ${0}px) {
-        /*code*/
-    }
+  @media (min-width: ${0}) {
+  }
