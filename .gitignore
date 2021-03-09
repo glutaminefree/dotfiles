@@ -28,11 +28,14 @@
 !/.config/ranger/scope.sh
 !/.config/ranger/bookmarks
 
-#newsbeuter
-!/.newsbeuter
-/.newsbeuter/*
-!/.newsbeuter/config
-!/.newsbeuter/urls
+#vscode
+!/.config/Code
+/.config/Code/*
+!/.config/Code/User
+/.config/Code/User/*
+!/.config/Code/User/snippets
+!/.config/Code/User/keybindings.json
+!/.config/Code/User/settings.json
 
 #vim
 !/.vim
@@ -48,11 +51,6 @@
 /.vim/view/*
 !/.vim/view/.gitkeep
 
-#vimperator
-!/.vimperator
-/.vimperator/*
-!/.vimperator/plugin
-
 #etc
 !/documents
 /documents/*
@@ -63,10 +61,8 @@
 #files
 !.gitconfig
 !.gitignore
-!.vimperatorrc
 !.vimrc*
 !.npmrc
-!.wegorc
 !.zshrc
 !.Xdefaults
 !.Xresources

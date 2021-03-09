@@ -1,0 +1,79 @@
+{
+    "editor.tabSize": 2,
+    "editor.autoClosingBrackets": "always",
+    "editor.autoClosingQuotes": "always",
+    "editor.tabCompletion": "on",
+
+    "workbench.colorTheme": "Braver's Solarized Light (themed workbench)",
+    "workbench.iconTheme": "vscode-icons",
+
+    "window.menuBarVisibility": "toggle",
+    "vsicons.dontShowNewVersionMessage": true,
+
+    "editor.rulers": [
+        {
+            "column": 100,
+            "color": "#eee8d5"
+        }
+    ],
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": "entity.other.attribute-name.class.pug",
+                "settings": {
+                    "foreground": "#9e8917"
+                }
+            }
+        ]
+    },
+    "files.insertFinalNewline": true,
+
+    "vim.hlsearch": true,
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<leader>", "%"],
+            "commands": ["editor.emmet.action.matchTag"]
+        }
+    ],
+    "vim.visualModeKeyBindings": [
+        {
+            "before": ["="],
+            "commands": ["editor.action.reindentselectedlines"]
+        },
+        {
+            "before": ["<leader>", "y"],
+            "commands": ["editor.action.clipboardCopyAction"],
+        }
+    ],
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["<C-j>"],
+            "after": ["<Esc>"]
+        }
+    ],
+    "vim.insertModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<C-p>"],
+            "commands": ["editor.action.clipboardPasteAction"]
+        }
+    ],
+
+    "multiCommand.commands": [
+        {
+            "command": "multiCommand.vimPaste",
+            "sequence": [
+                "extension.vim_ctrl+r",
+                {"command": "type", "args": {"text": "\""}}
+            ]
+        }
+    ],
+
+    "git.confirmSync": false,
+    "terminal.integrated.shell.linux": "/bin/sh",
+    "editor.smoothScrolling": true,
+    "remote.SSH.maxReconnectionAttempts": 8,
+    "workbench.editor.decorations.colors": true,
+    "explorer.confirmDragAndDrop": false,
+    "files.enableTrash": false,
+    "explorer.confirmDelete": false
+}

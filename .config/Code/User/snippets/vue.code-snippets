@@ -1,0 +1,62 @@
+{
+  "vue log": {
+    "scope": ["js", "vue"],
+    "prefix": "vuelog",
+    "body": [
+      "console.log(JSON.stringify($1, null, 2));"
+    ],
+    "description": "console log for vue data"
+  },
+  "vue base": {
+    "scope": ["js", "vue"],
+    "prefix": "vuebase",
+    "body": [
+      "<template lang=\"pug\">",
+      "\t.$1",
+      "</template>",
+      "",
+      "<script>",
+      "export default {",
+      "\tname: '$2',",
+      "};",
+      "</script>",
+      "",
+      "<style lang=\"scss\" scoped>",
+      "</style>"
+    ],
+    "description": "vue component base"
+  },
+  "vue data": {
+    "scope": ["js", "vue"],
+    "prefix": "vuedata",
+    "body": [
+      "data() {",
+      "\treturn {",
+      "\t\t$1: $2,",
+      "\t};",
+      "},"
+    ],
+    "description": "vue data func"
+  },
+  "eslint disable": {
+    "scope": ["js", "vue"],
+    "prefix": "esd",
+    "body": [
+      "/* eslint-disable */"
+    ],
+  },
+  "eslint enable": {
+    "scope": ["js", "vue"],
+    "prefix": "ese",
+    "body": [
+      "/* eslint-enable */"
+    ],
+  },
+  "eslint disable next line": {
+    "scope": ["js", "vue"],
+    "prefix": "esdl",
+    "body": [
+      "/* eslint-disable-next-line */"
+    ],
+  }
+}
