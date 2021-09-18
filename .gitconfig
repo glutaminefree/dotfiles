@@ -7,3 +7,5 @@
 [cola]
 	spellcheck = true
 	expandtab = true
+[pull]
+	rebase = false
