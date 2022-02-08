@@ -53,5 +53,51 @@
     "body": [
       "/* eslint-disable-next-line */"
     ],
+  },
+  "hasOwnProperty": {
+    "scope": ["js", "vue"],
+    "prefix": "hop",
+    "body": [
+      "const hop = Object.prototype.hasOwnProperty;"
+    ],
+  },
+  "returnTrue": {
+    "scope": ["js", "vue"],
+    "prefix": "rt",
+    "body": [
+      "return true;",
+    ],
+  },
+  "returnFalse": {
+    "scope": ["js", "vue"],
+    "prefix": "rf",
+    "body": [
+      "return false;",
+    ],
+  },
+  "fastTryCatch": {
+    "scope": ["js", "vue"],
+    "prefix": "ftc",
+    "body": [
+      "try {",
+      "\tconst result = await this.\\$api.${1:API}.${2:METHOD}();",
+      "\tif (!Array.isArray(result.data)) {",
+      "\t\tthrow new TypeError('wrong response');",
+      "\t}",
+      "\t$0this.${3:PROP} = result.data;",
+      "} catch (e) {",
+      "\tthis.\\$saveError('Не удалось ${4:ERROR_TEXT}', e);",
+      "}",
+    ],
+  },
+  "notify": {
+    "scope": ["js", "vue"],
+    "prefix": "ntf",
+    "body": [
+      "this.\\$notify({",
+      "\tstatus: 'error',",
+      "\ttext: ${1:ERROR_TEXT},",
+      "});",
+    ],
   }
 }

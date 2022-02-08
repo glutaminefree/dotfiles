@@ -2,7 +2,7 @@
 	name = glutaminefree
 	email = glutaminefree@mail.ru
 [gui]
-	editor = atom
+	editor = kwrite
 	historybrowser = gitk
 [cola]
 	spellcheck = true

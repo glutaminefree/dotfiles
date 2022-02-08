@@ -32,5 +32,10 @@
     "key": "ctrl+m d",
     "when": "!editorTextFocus && filesExplorerFocus && vim.active",
     "command": "deleteFile"
-  }
+  },
+  {
+    "key": "ctrl+j",
+    "command": "removeSecondaryCursors",
+    "when": "editorHasMultipleSelections && textInputFocus"
+  },
 ]
