@@ -1,23 +1,23 @@
 [Desktop Entry]
-DefaultProfile=termprofile.profile
-
-[Favorite Profiles]
-Favorites=
+DefaultProfile=myTerm.profile
 
 [KonsoleWindow]
 RemoveWindowTitleBarAndFrame=true
-ShowMenuBarByDefault=false
 
 [MainWindow]
-Height 1080=1080
+DP-4 HDMI-0 Height 1920x1080=706
+DP-4 HDMI-0 Width 1920x1080=1244
+DP-4 HDMI-0 Window-Maximized 1920x1080=true
+DP-4 HDMI-0 XPosition 1920x1080=2258
+DP-4 HDMI-0 YPosition 1920x1080=207
 MenuBar=Disabled
-State=AAAA/wAAAAD9AAAAAAAAB4AAAAQUAAAABAAAAAQAAAAIAAAACPwAAAAA
+RestorePositionForNextInstance=false
+State=AAAA/wAAAAD9AAAAAQAAAAAAAAAAAAAAAPwCAAAAAvsAAAAiAFEAdQBpAGMAawBDAG8AbQBtAGEAbgBkAHMARABvAGMAawAAAAAA/////wAAALUBAAAD+wAAABwAUwBTAEgATQBhAG4AYQBnAGUAcgBEAG8AYwBrAAAAAAD/////AAAA4wEAAAMAAAeAAAAD+AAAAAQAAAAEAAAACAAAAAj8AAAAAQAAAAIAAAACAAAAFgBtAGEAaQBuAFQAbwBvAGwAQgBhAHIAAAAAAP////8AAAAAAAAAAAAAABwAcwBlAHMAcwBpAG8AbgBUAG8AbwBsAGIAYQByAAAAAQ7/////AAAAAAAAAAA=
 ToolBarsMovable=Disabled
-Width 1920=1920
-Window-Maximized 1080x1920=true
-
-[Notification Messages]
-CloseAllTabs=true
 
 [TabBar]
-NewTabBehavior=PutNewTabAfterCurrentTab
+NewTabButton=true
+
+[UiSettings]
+ColorScheme=
+WindowColorScheme=Default

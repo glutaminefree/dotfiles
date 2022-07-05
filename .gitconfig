@@ -1,11 +1,3 @@
 [user]
-	name = glutaminefree
+	name = Andrey T.
 	email = glutaminefree@mail.ru
-[gui]
-	editor = kwrite
-	historybrowser = gitk
-[cola]
-	spellcheck = true
-	expandtab = true
-[pull]
-	rebase = false
