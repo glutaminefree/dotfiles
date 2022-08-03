@@ -27,9 +27,10 @@ source $ZSH/oh-my-zsh.sh
 
 unsetopt share_history
 umask 022
-export EDITOR=vim
+export EDITOR=vimx
 
 alias v="gvim -v --servername orig"
+alias vim="vimx"
 alias r="ranger"
 alias :q="exit"
 alias ll="ls -lh --color=auto"
