@@ -1,6 +1,5 @@
-NPM_PACKAGES="${HOME}/.npm-packages"
-export PATH="$NPM_PACKAGES/bin:$PATH"
-export MANPATH="${MANPATH-$(manpath)}:$NPM_PACKAGES/share/man"
+NPM_PACKAGES="${HOME}/.npm-packages/bin"
+export PATH="$NPM_PACKAGES:$PATH"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
