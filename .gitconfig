@@ -3,3 +3,4 @@
 	email = glutaminefree@mail.ru
 [cola]
 	spellcheck = false
+	startupmode = list
