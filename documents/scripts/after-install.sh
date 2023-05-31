@@ -40,6 +40,8 @@ cp -r * ..
 cd ..
 rm -rf dotfiles
 
+git update-index --assume-unchanged .config/ranger/bookmarks
+
 echo 'Copying scripts'
 sudo cp $HOMEPATH/documents/scripts/open_with_vim.sh /usr/local/bin/owv
 sudo cp $HOMEPATH/documents/scripts/start-gvim.sh    /usr/local/bin/gvimx
