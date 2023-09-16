@@ -36,7 +36,7 @@ fi
 export EDITOR=vimx
 
 alias v="gvim -v --servername orig"
-#alias vim="vimx"
+alias vim="vimx"
 alias r="ranger"
 alias :q="exit"
 alias ll="ls -lh --color=auto"
